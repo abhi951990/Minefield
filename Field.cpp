@@ -51,11 +51,18 @@ FieldType Field::get(int x, int y)
  bool Field::isSafe(int x, int y)
  {
  	//TODO: Complete this function, isSafe(int,int)
+  if(x < 0 || x >= FIELD_DIMENSION || y < 0 || y >= FIELD_DIMENSION)
+ 	{
+ 		throw "Out of bounds";
+ 	}
+  else{
+    
+  }
  	return true;
  }
 
 /**
- * Changes the location from EMPTY_HIDDEN to EMPTY_SHOWN for the 
+ * Changes the location from EMPTY_HIDDEN to EMPTY_SHOWN for the
  * location and any valid locations adjacent (immediately above,
  * below, left, or right as printed) to the provided (x,y) location
 **/
