@@ -31,9 +31,16 @@ TEST(FieldTest,isSafe){
   ASSERT_EQ(MINE_SHOWN,minefield.get(5,5));
   ASSERT_FALSE(MINE_SHOWN);
   ASSERT_TRUE(MINE_HIDDEN);
-
+  // try{
+  //
   // minefield.placeMine(-1,5);
   // minefield.isSafe(-1,5);
-  // ASSERT_EQ(MINE_SHOWN,minefield.get(5,5));
+  // ASSERT_EQ(MINE_SHOWN,minefield.get(-1,5));
+  // }
+  // catch(int e){
+  //   std::cout<<"exception: "<<e<<std::endl;
+  // }
+
+
 
 }
